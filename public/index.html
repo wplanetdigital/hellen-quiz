@@ -58,6 +58,13 @@ try{
     align-items:center;
     margin-bottom:28px;
   }
+  .avatar-row{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:10px;
+    margin-bottom:10px;
+  }
   .avatar{
     width:56px;
     height:56px;
@@ -67,8 +74,24 @@ try{
     align-items:center;
     justify-content:center;
     font-size:22px;
-    margin-bottom:10px;
     box-shadow:0 2px 8px rgba(0,0,0,0.12);
+  }
+  .avatar-badge{
+    width:56px;
+    height:56px;
+    border-radius:50%;
+    background:#ffffff;
+    border:1px solid var(--borda);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    overflow:hidden;
+    box-shadow:0 2px 8px rgba(0,0,0,0.08);
+  }
+  .avatar-badge img{
+    width:78%;
+    height:78%;
+    object-fit:contain;
   }
   .handle{
     display:flex;
@@ -150,7 +173,10 @@ try{
 <div class="quiz-container">
 
   <div class="brand-header">
-    <div class="avatar">💙</div>
+    <div class="avatar-row">
+      <div class="avatar">💙</div>
+      <div class="avatar-badge"><img src="/assets/bienal-icon.png" alt="28ª Bienal Internacional do Livro de São Paulo"></div>
+    </div>
     <div class="handle">@hellenpantojawriter <span class="badge">✔</span></div>
     <div class="handle-sub">Azul Cobalto · Quiz</div>
   </div>
