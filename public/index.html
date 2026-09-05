@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ganhe um Brinde Exclusivo — Azul Cobalto</title>
+
+<!-- ============================================================
+  META PIXEL — Pixel-Hellen (ID real, conectado ao Business Manager)
+============================================================= -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+try{
+  fbq('init', '1012165451869211');
+  fbq('track', 'PageView');
+}catch(e){}
+</script>
+<noscript><img height="1" width="1" style="display:none"
+  src="https://www.facebook.com/tr?id=1012165451869211&ev=PageView&noscript=1" /></noscript>
+<!-- FIM META PIXEL -->
+
+<style>
+  :root{
+    --verde:#2e8b57;
+    --azul:#3a6ea5;
+    --texto:#141416;
+    --texto-sub:#6b7280;
+    --borda:#e5e7eb;
+    --fundo-card:#f7f8fa;
+    --fundo-card-hover:#eef1f5;
+  }
+  *{box-sizing:border-box;margin:0;padding:0;}
+  html,body{height:100%;}
+  body{
+    font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif;
+    background:#ffffff;
+    color:var(--texto);
+    min-height:100vh;
+    display:flex;
+    align-items:flex-start;
+    justify-content:center;
+    padding:48px 20px;
+  }
+  .quiz-container{
+    width:100%;
+    max-width:560px;
+  }
+  .brand-header{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    margin-bottom:28px;
+  }
+  .avatar{
+    width:56px;
+    height:56px;
+    border-radius:50%;
+    background:linear-gradient(135deg, var(--verde), var(--azul));
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:22px;
+    margin-bottom:10px;
+    box-shadow:0 2px 8px rgba(0,0,0,0.12);
+  }
+  .handle{
+    display:flex;
+    align-items:center;
+    gap:4px;
+    font-size:14px;
+    font-weight:600;
+    color:var(--texto);
+  }
+  .handle .badge{ color:var(--azul); font-size:14px; }
+  .handle-sub{ font-size:12.5px; color:var(--texto-sub); margin-top:2px; }
+
+  .progress-track{
+    width:100%; height:5px; background:var(--borda);
+    border-radius:99px; overflow:hidden; margin-bottom:32px;
+  }
+  .progress-fill{
+    height:100%;
+    background:linear-gradient(90deg, var(--verde), var(--azul));
+    border-radius:99px; transition:width .35s ease; width:0%;
+  }
+
+  .step{ display:none; animation:fadeIn .35s ease; }
+  .step.active{ display:block; }
+  @keyframes fadeIn{ from{opacity:0; transform:translateY(6px);} to{opacity:1; transform:translateY(0);} }
+
+  .step h1{ font-size:24px; font-weight:700; line-height:1.35; text-align:center; margin-bottom:8px; letter-spacing:-0.3px; }
+  .step .sub{ font-size:14.5px; color:var(--texto-sub); text-align:center; margin-bottom:28px; }
+
+  .options{ display:flex; flex-direction:column; gap:12px; }
+  .option{
+    display:flex; align-items:center; gap:14px; width:100%; text-align:left;
+    background:var(--fundo-card); border:1.5px solid transparent; color:var(--texto);
+    padding:14px 18px; border-radius:14px; font-size:15.5px; font-weight:500;
+    font-family:inherit; cursor:pointer; transition:all .15s ease;
+  }
+  .option:hover{ background:var(--fundo-card-hover); }
+  .option.selected{ border-color:var(--verde); background:#eefaf3; }
+  .option .icon{
+    width:38px; height:38px; min-width:38px; border-radius:50%; background:#ffffff;
+    border:1px solid var(--borda); display:flex; align-items:center; justify-content:center; font-size:18px;
+  }
+
+  .field{ margin-bottom:16px; }
+  .field label{ display:block; font-size:13px; font-weight:600; color:var(--texto-sub); margin-bottom:6px; }
+  .field input{
+    width:100%; padding:14px 16px; border-radius:12px; border:1.5px solid var(--borda);
+    background:#fff; color:var(--texto); font-size:15.5px; font-family:inherit;
+  }
+  .field input::placeholder{ color:#a9adb4; }
+  .field input:focus{ outline:none; border-color:var(--azul); }
+
+  .nav-row{ display:flex; justify-content:flex-start; margin-top:22px; }
+  .btn{
+    font-family:inherit; font-size:15.5px; font-weight:700; padding:15px 24px;
+    border-radius:14px; border:none; cursor:pointer; transition:transform .12s ease, opacity .12s ease;
+  }
+  .btn:active{ transform:scale(0.98); }
+  .btn-primary{ background:linear-gradient(90deg, var(--verde), var(--azul)); color:#fff; width:100%; }
+  .btn-primary:disabled{ opacity:.4; cursor:not-allowed; }
+  .btn-ghost{ background:transparent; color:var(--texto-sub); padding:10px 4px; font-weight:600; font-size:14px; }
+
+  .intro-emoji{ font-size:44px; text-align:center; margin-bottom:16px; }
+  .intro h1{ text-align:center; font-size:27px; margin-bottom:10px; }
+  .intro p{ text-align:center; font-size:15px; color:var(--texto-sub); margin-bottom:28px; line-height:1.55; }
+
+  .result{ text-align:center; }
+  .result-emoji{ font-size:52px; margin-bottom:14px; }
+  .result h1{ font-size:25px; margin-bottom:10px; }
+  .result p{ font-size:15px; color:var(--texto-sub); line-height:1.6; margin-bottom:24px; }
+  .code-box{ background:#f7f8fa; border:2px dashed var(--verde); border-radius:16px; padding:20px; margin-bottom:24px; }
+  .code-box .label{ font-size:12px; font-weight:700; text-transform:uppercase; letter-spacing:1.5px; color:var(--verde); margin-bottom:8px; }
+  .code-box .code{ font-size:27px; letter-spacing:3px; font-weight:800; color:var(--texto); }
+  .footer-note{ text-align:center; font-size:12px; color:#b0b3ba; margin-top:24px; }
+</style>
+</head>
+<body>
+
+<div class="quiz-container">
+
+  <div class="brand-header">
+    <div class="avatar">💙</div>
+    <div class="handle">@hellenpantojawriter <span class="badge">✔</span></div>
+    <div class="handle-sub">Azul Cobalto · Quiz</div>
+  </div>
+
+  <div class="progress-track"><div class="progress-fill" id="progressFill"></div></div>
+
+  <div class="step intro active" data-step="intro">
+    <div class="intro-emoji">🎁</div>
+    <h1>Ganhe um brinde exclusivo!</h1>
+    <p>Responda 6 perguntas rápidas sobre você e seu gosto por romance — leva menos de 1 minuto e no final você recebe seu código de brinde.</p>
+    <button class="btn btn-primary" onclick="goTo(1)">Começar</button>
+  </div>
+
+  <div class="step" data-step="1">
+    <h1>Você é...</h1>
+    <div class="sub">Pergunta 1 de 6</div>
+    <div class="options" data-field="genero">
+      <button class="option" data-value="mulher"><span class="icon">👩</span>Mulher</button>
+      <button class="option" data-value="homem"><span class="icon">🧑</span>Homem</button>
+      <button class="option" data-value="prefiro_nao_dizer"><span class="icon">🤍</span>Prefiro não dizer</button>
+    </div>
+  </div>
+
+  <div class="step" data-step="2">
+    <h1>Qual sua idade?</h1>
+    <div class="sub">Pergunta 2 de 6</div>
+    <div class="options" data-field="idade">
+      <button class="option" data-value="13-17"><span class="icon">🎒</span>13 a 17 anos</button>
+      <button class="option" data-value="18-24"><span class="icon">🎓</span>18 a 24 anos</button>
+      <button class="option" data-value="25-34"><span class="icon">💼</span>25 a 34 anos</button>
+      <button class="option" data-value="35+"><span class="icon">🌿</span>35 anos ou mais</button>
+    </div>
+  </div>
+
+  <div class="step" data-step="3">
+    <h1>Já leu Azul Cobalto?</h1>
+    <div class="sub">Pergunta 3 de 6</div>
+    <div class="options" data-field="ja_leu">
+      <button class="option" data-value="sim"><span class="icon">✅</span>Sim, já li!</button>
+      <button class="option" data-value="lendo"><span class="icon">📖</span>Estou lendo agora</button>
+      <button class="option" data-value="nao_ainda"><span class="icon">🕊️</span>Não, mas quero ler</button>
+    </div>
+  </div>
+
+  <div class="step" data-step="4">
+    <h1>Qual seu gênero favorito?</h1>
+    <div class="sub">Pergunta 4 de 6</div>
+    <div class="options" data-field="genero_literario">
+      <button class="option" data-value="new_adult"><span class="icon">🎓</span>New Adult</button>
+      <button class="option" data-value="romance_universitario"><span class="icon">🏈</span>Romance universitário</button>
+      <button class="option" data-value="dark_romance"><span class="icon">🖤</span>Dark romance</button>
+      <button class="option" data-value="fantasia_romantica"><span class="icon">✨</span>Fantasia romântica</button>
+      <button class="option" data-value="comedia_romantica"><span class="icon">😂</span>Comédia romântica</button>
+    </div>
+  </div>
+
+  <div class="step" data-step="5">
+    <h1>Qual autora você mais ama?</h1>
+    <div class="sub">Pergunta 5 de 6</div>
+    <div class="options" data-field="autora_favorita">
+      <button class="option" data-value="emily_henry"><span class="icon">📗</span>Emily Henry</button>
+      <button class="option" data-value="lynn_painter"><span class="icon">📘</span>Lynn Painter</button>
+      <button class="option" data-value="abby_jimenez"><span class="icon">📙</span>Abby Jimenez</button>
+      <button class="option" data-value="hannah_bonam_young"><span class="icon">📕</span>Hannah Bonam Young</button>
+      <button class="option" data-value="elena_armas"><span class="icon">📔</span>Elena Armas</button>
+    </div>
+  </div>
+
+  <div class="step" data-step="6">
+    <h1>Você está na Bienal agora?</h1>
+    <div class="sub">Pergunta 6 de 6</div>
+    <div class="options" data-field="esta_na_bienal">
+      <button class="option" data-value="sim_presencial"><span class="icon">📍</span>Sim, estou aqui agora!</button>
+      <button class="option" data-value="nao_online"><span class="icon">📱</span>Não, vi pelo Instagram</button>
+    </div>
+  </div>
+
+  <div class="step" data-step="7">
+    <h1>Onde te envio o código do brinde?</h1>
+    <div class="sub">Última etapa</div>
+    <div class="field">
+      <label for="nome">Seu nome</label>
+      <input type="text" id="nome" placeholder="Como te chamam">
+    </div>
+    <div class="field">
+      <label for="whatsapp">WhatsApp (com DDD)</label>
+      <input type="tel" id="whatsapp" placeholder="(11) 91234-5678">
+    </div>
+    <div class="field">
+      <label for="email">E-mail (opcional)</label>
+      <input type="email" id="email" placeholder="seu@email.com">
+    </div>
+    <button class="btn btn-primary" id="submitBtn" onclick="submitQuiz()">Quero meu brinde 🎁</button>
+  </div>
+
+  <div class="step result" data-step="result">
+    <div class="result-emoji">🎉</div>
+    <h1>Prontinho!</h1>
+    <p id="resultText">Seu código de brinde exclusivo é:</p>
+    <div class="code-box">
+      <div class="label">Código do brinde</div>
+      <div class="code" id="codeDisplay">COBALTO-0000</div>
+    </div>
+    <p id="resultInstructions">Mostre esse código pra Hellen no estande, perto da Intrínseca, e resgate seu brinde exclusivo de Azul Cobalto.</p>
+  </div>
+
+  <div class="nav-row" id="navRow" style="display:none">
+    <button class="btn btn-ghost" onclick="goBack()">← Voltar</button>
+  </div>
+
+  <div class="footer-note">Seus dados são usados só pra te enviar o brinde e novidades da Hellen</div>
+</div>
+
+<script>
+  const answers = {};
+  let currentStep = 'intro';
+  const stepOrder = ['intro','1','2','3','4','5','6','7','result'];
+
+  const params = new URLSearchParams(window.location.search);
+  answers.origem = params.get('origem') || 'direto';
+
+  // sessão persistente por visitante (pra funil e lista por usuário)
+  function getSessionId(){
+    try{
+      let sid = localStorage.getItem('hq_session_id');
+      if(!sid){
+        sid = (crypto.randomUUID ? crypto.randomUUID() : 'sid-' + Date.now() + '-' + Math.random().toString(36).slice(2));
+        localStorage.setItem('hq_session_id', sid);
+      }
+      return sid;
+    }catch(e){
+      return 'sid-' + Date.now() + '-' + Math.random().toString(36).slice(2);
+    }
+  }
+  const SESSION_ID = getSessionId();
+
+  function logEvent(event_type, extra){
+    extra = extra || {};
+    const body = JSON.stringify(Object.assign({
+      session_id: SESSION_ID,
+      event_type: event_type,
+      origem: answers.origem
+    }, extra));
+    try{
+      fetch('/api/event', {
+        method: 'POST',
+        headers: {'Content-Type':'application/json'},
+        body: body,
+        keepalive: true
+      }).catch(()=>{});
+    }catch(e){}
+  }
+
+  function logExitBeacon(){
+    try{
+      const body = JSON.stringify({
+        session_id: SESSION_ID,
+        event_type: 'exit',
+        step: currentStep,
+        origem: answers.origem
+      });
+      if(navigator.sendBeacon){
+        navigator.sendBeacon('/api/event-beacon', body);
+      }
+    }catch(e){}
+  }
+  document.addEventListener('visibilitychange', function(){
+    if(document.visibilityState === 'hidden') logExitBeacon();
+  });
+  window.addEventListener('pagehide', logExitBeacon);
+
+  document.querySelectorAll('.options').forEach(group => {
+    group.querySelectorAll('.option').forEach(btn => {
+      btn.addEventListener('click', () => {
+        group.querySelectorAll('.option').forEach(b => b.classList.remove('selected'));
+        btn.classList.add('selected');
+        const field = group.getAttribute('data-field');
+        const value = btn.getAttribute('data-value');
+        answers[field] = value;
+
+        logEvent('answer', { step: currentStep, field: field, value: value });
+        try{
+          if(typeof fbq === 'function'){
+            fbq('trackCustom', 'QuizAnswer', { step: currentStep, field: field, value: value });
+          }
+        }catch(e){}
+
+        setTimeout(() => goTo(parseInt(currentStep) + 1), 250);
+      });
+    });
+  });
+
+  function updateProgress(step){
+    const idx = stepOrder.indexOf(step);
+    const total = stepOrder.length - 2;
+    const pct = step === 'intro' ? 0 : Math.min(100, (idx / total) * 100);
+    document.getElementById('progressFill').style.width = pct + '%';
+  }
+
+  function goTo(step){
+    step = String(step);
+    document.querySelectorAll('.step').forEach(s => s.classList.remove('active'));
+    const target = document.querySelector('.step[data-step="' + step + '"]');
+    if(!target) return;
+    target.classList.add('active');
+    currentStep = step;
+    updateProgress(step);
+    document.getElementById('navRow').style.display = (step === 'intro' || step === 'result') ? 'none' : 'flex';
+    window.scrollTo(0,0);
+
+    logEvent('step_view', { step: step });
+    try{
+      if(typeof fbq === 'function'){
+        fbq('trackCustom', 'QuizStepView', { step: step });
+      }
+    }catch(e){}
+  }
+
+  function goBack(){
+    const idx = stepOrder.indexOf(currentStep);
+    if(idx > 1) goTo(stepOrder[idx - 1]);
+  }
+
+  function gerarCodigo(){
+    const n = Math.floor(1000 + Math.random() * 9000);
+    return 'COBALTO-' + n;
+  }
+
+  function submitQuiz(){
+    answers.nome = document.getElementById('nome').value.trim();
+    answers.whatsapp = document.getElementById('whatsapp').value.trim();
+    answers.email = document.getElementById('email').value.trim();
+
+    if(!answers.nome || !answers.whatsapp){
+      alert('Preenche nome e WhatsApp pra gente conseguir te enviar o brinde :)');
+      return;
+    }
+
+    answers.codigo = gerarCodigo();
+    answers.timestamp = new Date().toISOString();
+
+    try{
+      const leads = JSON.parse(localStorage.getItem('azulcobalto_leads') || '[]');
+      leads.push(answers);
+      localStorage.setItem('azulcobalto_leads', JSON.stringify(leads));
+    }catch(e){}
+
+    logEvent('lead', { payload: answers });
+
+    try{
+      if(typeof fbq === 'function'){
+        fbq('track', 'Lead', {
+          content_name: 'Quiz Bienal Azul Cobalto',
+          genero: answers.genero,
+          idade: answers.idade,
+          genero_literario: answers.genero_literario,
+          autora_favorita: answers.autora_favorita,
+          esta_na_bienal: answers.esta_na_bienal
+        });
+      }
+    }catch(e){}
+
+    document.getElementById('codeDisplay').textContent = answers.codigo;
+    if(answers.esta_na_bienal === 'sim_presencial'){
+      document.getElementById('resultInstructions').textContent =
+        'Mostre esse código pra Hellen no estande, perto da Intrínseca, e resgate seu brinde exclusivo de Azul Cobalto.';
+    } else {
+      document.getElementById('resultInstructions').textContent =
+        'Guarda esse código! Em breve a Hellen manda no seu WhatsApp como resgatar seu brinde digital exclusivo.';
+    }
+
+    goTo('result');
+  }
+
+  // primeira pageview do funil
+  logEvent('step_view', { step: 'intro' });
+</script>
+
+</body>
+</html>
